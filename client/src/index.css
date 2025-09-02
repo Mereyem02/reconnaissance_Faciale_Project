@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ====================================
+   🎨 Couleurs personnalisées
+==================================== */
+:root {
+  --color-primary: #2563eb;
+  --color-secondary: #64748b;
+  --color-accent: #10b981;
+  --color-bg: #f9fafb;
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+}
+
+/* ====================================
+   🔄 Reset & Base
+==================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ====================================
+   🔗 Liens
+==================================== */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1e40af; /* variante plus foncée */
+}
+
+/* ====================================
+   📦 Layout Container
+==================================== */
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ====================================
+   📝 Titres et Texte
+==================================== */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+}
+
+/* ====================================
+   🔘 Boutons
+==================================== */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+.input {
+  @apply w-full px-4 py-2 border rounded mb-2;
+}
+.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700;
+}
+.btn-secondary {
+  @apply bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400;
+}
+
+button:hover {
+  background-color: #1e40af;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ====================================
+   ✏️ Inputs & Textareas
+==================================== */
+input, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-surface);
+  outline: none;
+  width: 100%;
+  color: var(--color-text);
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* ====================================
+   🧾 Listes
+==================================== */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ====================================
+   📦 Carte / Conteneur
+==================================== */
+.card {
+  background-color: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
+}
+
+/* ====================================
+   🛠️ Classes utilitaires
+==================================== */
+.text-muted {
+  color: var(--color-muted);
+}
+.bg-accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide-fade-in {
+  animation: slideFadeIn 0.6s ease forwards;
+}
