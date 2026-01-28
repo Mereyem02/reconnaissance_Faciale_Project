@@ -38,7 +38,7 @@ A comprehensive employee attendance and behavior monitoring system powered by fa
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
-- **Node.js** (v14 or higher)
+- **Node.js** (v18 or higher recommended)
 - **npm** or **yarn**
 - **MongoDB** (local installation or MongoDB Atlas account)
 
@@ -140,7 +140,7 @@ reconnaissance_Faciale_Project/
 │   ├── controllers/       # Route controllers
 │   ├── models/           # Mongoose models
 │   ├── routes/           # API routes
-│   ├── public/           # Static files (face descriptors, etc.)
+│   ├── public/           # Static files (images, etc.)
 │   ├── server.js         # Server entry point
 │   └── package.json
 ├── database/             # Database related files
